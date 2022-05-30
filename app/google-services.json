@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1097685688742",
+    "project_id": "apptest-fed14",
+    "storage_bucket": "apptest-fed14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097685688742:android:9f8525c1f321b3f176ef67",
+        "android_client_info": {
+          "package_name": "com.zofa.apptest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097685688742-pbueq5hmirqb8u01ok1ljdjp0q0niu2k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDvlcGt9uYzyz8bY6GV7bYwXITQfvOoo4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097685688742-pbueq5hmirqb8u01ok1ljdjp0q0niu2k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
