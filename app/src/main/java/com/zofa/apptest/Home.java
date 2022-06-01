@@ -17,6 +17,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         btn = (MaterialButton) findViewById(R.id.logout);
+        btn2 = (MaterialButton) findViewById(R.id.gallery);
 
         btn.setOnClickListener(view -> {
 
@@ -26,6 +27,11 @@ public class Home extends AppCompatActivity {
 
         });
 
+        //button 2 change screen onclick
+        btn2.setOnClickListener(view -> {
+            Intent intent = new Intent(Home.this,Gallery.class);
+            startActivity(intent);
+        });
 
     }
 }
