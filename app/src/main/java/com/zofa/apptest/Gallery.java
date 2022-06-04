@@ -75,24 +75,21 @@ public class Gallery extends AppCompatActivity {
     }
 
     private void uploadImage() {
-
+        String maxid = System.currentTimeMillis()+"" ;
         if (selectedImage != null) {
             pd = new ProgressDialog(this);
             pd.setTitle("Uploading File...");
             pd.show();
 
-            SimpleDateFormat dataf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
-            Date now = new Date();
-            String filename = dataf.format(now);
-            Sref = FirebaseStorage.getInstance().getReference("images/" + filename + ".png");
+            Sref = FirebaseStorage.getInstance().getReference("images/" + maxid + ".png");
             EditText name = findViewById(R.id.username1);
             EditText  mail = findViewById(R.id.password1);
 
             //data
-            String maxid = System.currentTimeMillis()+"" ;
-            Product member = new Product(name.getText().toString(),mail.getText().toString(),"https://firebasestorage.googleapis.com/v0/b/apptest-fed14.appspot.com/o/images%2F" + filename + ".png?alt=media");
+
+            Product member = new Product(name.getText().toString(),mail.getText().toString(), maxid+ ".png");
             ref.child(maxid).setValue(member);
-            Toast.makeText(Gallery.this,"Data inserted",Toast.LENGTH_LONG).show();
+
 
             Sref.putFile(selectedImage)
                     .addOnSuccessListener(new OnSuccessListener < UploadTask.TaskSnapshot > () {
@@ -103,7 +100,7 @@ public class Gallery extends AppCompatActivity {
                             if (pd.isShowing())
                                 pd.dismiss();
 
-                            Toast.makeText(Gallery.this, "Image Uploaded", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Gallery.this,"Data inserted",Toast.LENGTH_LONG).show();
 
                         }
                     }).addOnFailureListener(new OnFailureListener() {
