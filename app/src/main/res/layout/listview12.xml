@@ -9,10 +9,6 @@
 
 
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="53dp" />
-
 
     <ImageView
         android:id="@+id/imageView23"
@@ -20,22 +16,25 @@
         android:layout_height="wrap_content"
         tools:srcCompat="@tools:sample/avatars" />
 
+
     <Space
         android:layout_width="match_parent"
-        android:layout_height="53dp" />
+        android:layout_height="30dp" />
 
     <TextView
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="53dp" />
 
     <TextView
         android:id="@+id/textView2"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
@@ -46,13 +45,18 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="53dp" />
+        android:layout_height="33dp" />
 
-    <Button
-        android:id="@+id/button"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/gallery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="Details" />
+
+
 
 
 </LinearLayout>
