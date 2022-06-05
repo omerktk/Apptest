@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class fetchdatabase extends BaseAdapter {
@@ -54,7 +56,7 @@ public class fetchdatabase extends BaseAdapter {
 
         pname.setText(data.get(position).pname());
         pdetails.setText(data.get(position).pdetail());
-
+        Glide.with(this.context).load(data.get(position).pimage()).into(pimage);
 
 
 
