@@ -9,24 +9,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
-public class fetchdatabase extends BaseAdapter {
+public class TeaMarkAdapter2 extends BaseAdapter {
 
 
     //array with model
 
 
 
-    ArrayList<Product> data;
+    ArrayList<JavaModal> data;
     Context context;
 
     String Sref = "gs://apptest-fed14.appspot.com/images";
 
     //alt insert to create contractor
-    public fetchdatabase(ArrayList<Product> data, Context context) {
+    public TeaMarkAdapter2(ArrayList<JavaModal> data, Context context) {
         this.data = data;
         this.context = context;
 
@@ -50,7 +49,7 @@ public class fetchdatabase extends BaseAdapter {
     //write in this
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View root = LayoutInflater.from(context).inflate(R.layout.listview12, null);
+        View root = LayoutInflater.from(context).inflate(R.layout.teamarklistview, null);
 
         TextView pname = root.findViewById(R.id.textView1);
         TextView pdetails = root.findViewById(R.id.textView2);
@@ -63,16 +62,7 @@ public class fetchdatabase extends BaseAdapter {
         pdetails.setText(data.get(position).pdetail);
 
 
-
-        //display photos from database (tell me how to make it work)
         Glide.with(this.context).load(imagename).into(pimage);
-
-
-
-        //display photos by link (working)
-//       Glide.with(this.context).load("https://i.stack.imgur.com/4NTnO.png").into(pimage);
-
-
 
 
 

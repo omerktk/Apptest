@@ -19,13 +19,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Viewimage"
+            android:name=".TeaMarkList2"
             android:exported="false" />
         <activity
             android:name=".tpanel"
             android:exported="false" />
         <activity
-            android:name=".Gallery"
+            android:name=".TeaMarkDataUpload"
             android:exported="false" />
         <activity
             android:name=".Home"

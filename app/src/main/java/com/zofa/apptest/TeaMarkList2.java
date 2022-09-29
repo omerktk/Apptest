@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.google.android.material.button.MaterialButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -15,19 +14,19 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Viewimage extends AppCompatActivity {
+public class TeaMarkList2 extends AppCompatActivity {
 
 
     ListView lv;
 
     DatabaseReference ref = FirebaseDatabase.getInstance("https://apptest-fed14-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Products");
 
-    ArrayList<Product> data;
+    ArrayList<JavaModal> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_viewimage);
+        setContentView(R.layout.activity_teamarklist);
         lv = (ListView) findViewById(R.id.listalldata);
         fetch();
     }
@@ -41,10 +40,10 @@ public class Viewimage extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot firedata : dataSnapshot.getChildren()) {
-                    Product s1 = firedata.getValue(Product.class);
+                    JavaModal s1 = firedata.getValue(JavaModal.class);
                     data.add(s1);
                 }
-                fetchdatabase f1 = new fetchdatabase(data, Viewimage.this);
+                TeaMarkAdapter2 f1 = new TeaMarkAdapter2(data, TeaMarkList2.this);
                 lv.setAdapter(f1);
             }
 

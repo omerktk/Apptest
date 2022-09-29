@@ -4,10 +4,10 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".Viewimage"
+tools:context=".TeaMarkList2"
 android:orientation="vertical"
 android:layout_gravity="center"
-    android:background="@drawable/background">
+android:background="@color/black">
 
 
 
@@ -15,7 +15,7 @@ android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/signin"
-        android:text="Explore"
+        android:text="std marks list"
         android:textColor="@color/white"
         android:textSize="35dp"
         android:textStyle="bold"

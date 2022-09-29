@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.button.MaterialButton;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class tpanel extends AppCompatActivity {
     MaterialButton btn,btn2;
@@ -20,14 +19,14 @@ public class tpanel extends AppCompatActivity {
 
         btn.setOnClickListener(view -> {
 
-            Intent intent = new Intent(tpanel.this,Gallery.class);
+            Intent intent = new Intent(tpanel.this, TeaMarkDataUpload.class);
             startActivity(intent);
 
         });
 
         //button 2 change screen onclick
         btn2.setOnClickListener(view -> {
-            Intent intent = new Intent(tpanel.this,Viewimage.class);
+            Intent intent = new Intent(tpanel.this, TeaMarkList2.class);
             startActivity(intent);
         });
 
